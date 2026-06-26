@@ -1,0 +1,68 @@
+@font-face {
+    font-family: 'ChunkFive Print';
+    src: url('fonts/ChunkFivePrint.woff2') format('woff2'),
+        url('fonts/ChunkFivePrint.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'PT Sans Caption';
+    src: url('fonts/PTSans-Caption.woff2') format('woff2'),
+        url('fonts/PTSans-Caption.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+*, *::after, *::before{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 1em;
+    padding: 0;
+    width: 80vw;
+    margin: 0 auto;
+    display: flex;
+    line-height: 1.5;
+}
+
+.bananas-container {
+    position: relative;
+}
+
+.bananas-img{
+    height: 100vh;
+}
+
+.logo-container{
+    position: absolute;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    top: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 80px;
+}
+
+.logo-name{
+    position: relative;
+    right: 120px;
+    font: 4rem 'ChunkFive Print';
+    color: rgb(0, 247, 255);
+    text-shadow: 0 0 10px yellow;
+}
+svg {
+}
+
+form {
+    max-height: 100vh;
+
+    margin: 15vh 2vw;
+}
+
+
