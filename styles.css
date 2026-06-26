@@ -22,12 +22,11 @@
 }
 
 body{
-    font-size: 1em;
+    font: 1em/1.5 'PT Sans Caption';
     padding: 0;
     width: 80vw;
     margin: 0 auto;
     display: flex;
-    line-height: 1.5;
 }
 
 .bananas-container {
@@ -52,17 +51,44 @@ body{
 .logo-name{
     position: relative;
     right: 120px;
+    top: 5px;
     font: 4rem 'ChunkFive Print';
-    color: rgb(0, 247, 255);
+    color: rgb(0, 255, 255);
     text-shadow: 0 0 10px yellow;
-}
-svg {
 }
 
 form {
     max-height: 100vh;
-
-    margin: 15vh 2vw;
 }
+
+form > p{
+    width: 80%;
+    margin: 110px 48px 50px 48px;
+    font-size: 1.4em;
+}
+
+section{
+    padding: 20px 48px 42px 48px;
+    box-shadow: 3px 3px 10px #999;
+}
+
+.inputs-container{
+    margin-top: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+.inputs-container>div{
+    display: flex;
+    flex-flow: wrap column;
+    width: 400px;
+}
+
+input{
+    height: 32px;
+}
+
+
 
 
