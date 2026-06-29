@@ -24,7 +24,7 @@
 body{
     font: 1em/1.5 'PT Sans Caption';
     padding: 0;
-    width: 80vw;
+    width: min(100vw, 1500px);
     margin: 0 auto;
     display: flex;
 }
@@ -34,7 +34,7 @@ body{
 }
 
 .bananas-img{
-    height: 100vh;
+    height: max(100vh, 800px);
 }
 
 .logo-container{
@@ -55,14 +55,17 @@ body{
     font: 4rem 'ChunkFive Print';
     color: rgb(0, 255, 255);
     text-shadow: 0 0 10px yellow;
+    
 }
 
 form {
-    max-height: 100vh;
+    height: max(100vh, 500px);
 }
 
-form > p{
-    width: 80%;
+
+
+p:first-of-type{
+    width: max(750px, 80%);
     margin: 110px 48px 50px 48px;
     font-size: 1.4em;
 }
@@ -74,21 +77,100 @@ section{
 
 .inputs-container{
     margin-top: 16px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 50px;
 }
 
-.inputs-container>div{
+
+
+.inputs-line{
     display: flex;
-    flex-flow: wrap column;
-    width: 400px;
+    gap: 100px;
+    margin-bottom: 16px;
+}
+
+
+.inputs-line > div{
+    display: flex;
+    flex-direction: column;
 }
 
 input{
     height: 32px;
+    width: clamp(200px, 15vw ,800px);
+    border: 1px solid #ccc;
+    border-radius: 3px;  
 }
 
+span{
+    position: relative;
+}
+
+input[required]:user-invalid + span::after{
+    font-size: 0.7rem;
+    position: absolute;
+    content: "required";
+    color: black;
+    background-color: red;
+    padding: 5px 10px;
+    right: 0;
+}
+
+input[type=email]:user-invalid + span::after{
+    font-size: 0.7rem;
+    position: absolute;
+    content: "please enter a valid email";
+    color: black;
+    background-color: red;
+    padding: 5px 10px;
+    right: 0;
+}
+input[type=password]:user-invalid + span::after{
+    font-size: 0.7rem;
+    position: absolute;
+    content: "8-30 characters with at least 1 digit and uppercase letter";
+    color: black;
+    background-color: red;
+    padding: 5px 10px;
+    right: 0;
+}
+
+input:focus{
+    border: 1px solid #1100ff;
+    box-shadow: 1px 1px 3px;
+    outline: none;
+}
+
+input:user-invalid{
+    border: 1px solid #f00;
+}
+
+button {
+    margin: 24px 48px;
+    padding: 12px 48px;
+    border-radius: 5px;
+    background-color: yellow;
+    border: none;
+    box-shadow: 1px 1px 3px #aaa;
+    cursor: pointer;
+    font-family: PT Sans Caption;
+    font-weight: 600;
+}
+
+button:hover{
+    background-color: rgb(248, 248, 91);
+}
+
+button:active{
+    background-color: rgb(255, 217, 0);
+}
+
+button + p{
+    font-size: 0.8rem;
+    margin-left: 48px;
+}
+
+a{
+    color: rgb(219, 193, 46)
+}
 
 
 
